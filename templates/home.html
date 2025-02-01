@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Our Site</h1>
+
+    <h2>Movies</h2>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <strong>{{ movie.title }}</strong> - {{ movie.producer }} ({{ movie.duration }} sec)
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Articles</h2>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <strong>{{ article.title }}</strong> - {{ article.author }}
+                <p>{{ article.text }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
